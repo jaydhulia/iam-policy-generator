@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# iam-policy-generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About this project
 
-## Available Scripts
+### Description
 
-In the project directory, you can run:
+A simple web app that can be used to generate IAM policies for AWS.
 
-### `npm start`
+### Tech stack
+React, Semantic UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Goals
+The eventual goal is to make IAM policy generation really simple for users and make it really hard to make mistakes. In order to do this, lots of tasks need to be done:
+- Provide an easy intuitive interface for advanced AWS users to create complex policies
+- Provide CRUD policy generation for services for users who aren't familiar with AWS
+- Provide commonly used templates as an easy way to generate policies (S3 Read, Assume Role, S3 Write etc.)
+- Use gathered AWS data to accurately suggest resources based on action/services
+- Allow users to export the generated policy in a variety of formats (JSON, TerraForm, YAML etc.)
+- Provide recommendations for the generated policies (display a list of common mistakes for specific situations)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Notes
 
-### `npm test`
+- Currently this is a very much WIP repo that I am working on for fun. If you are interested in contributing, feel free to ping me on [LinkedIn](https://www.linkedin.com/in/jay-dhulia/).
+- I am mainly building this for fun and as a way to learn, so don't expect anything too much :) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Status
+### Progress so far
+- AWS Service is now searchable and can be selected
+- Based on the AWS Service selected, actions can be selected
 
-### `npm run build`
+### Next items on the list
+- Allow users to remove actions
+- Prevent duplicate actions
+- Change in service -> figure out what should be the best approach
+- Allow users to add statements
+- Resources
+- Conditions
+- Show output on right (JSON, TerraForm, YAML etc dropdown)
+- Dropdown on left for selecting creating a policy from a template vs creating from scratch
+- Generate actions from CRUD operations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Credit
+The dataset used in this repo is originally generated from: https://github.com/iann0036/iam-dataset. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
