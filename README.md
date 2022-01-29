@@ -28,6 +28,9 @@ The eventual goal is to make IAM policy generation really simple for users and m
 
 ## Project Status
 
+Here is what it looks like right now:
+<img src="https://github.com/jaydhulia/iam-policy-generator/blob/master/images/progress.png">
+
 ### Progress so far
 
 - AWS Service is now searchable and can be selected
